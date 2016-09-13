@@ -6,16 +6,17 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-  	<button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>musiclist</ion-title>
+	<ion-navbar>
+		<button menuToggle>
+		<ion-icon name="menu"></ion-icon>
+	</button>
+	<ion-title>musiclist</ion-title>
 
-  </ion-navbar>
+	</ion-navbar>
+	<ion-searchbar [(ngModel)]="keyword" 
+		(ionInput)="searchItems($event)" showCancelButton></ion-searchbar>
 
 </ion-header>
-
 
 <ion-content padding>
 	<ion-list>

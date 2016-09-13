@@ -13,11 +13,20 @@ import { NavController } from 'ionic-angular';
 export class MusiclistPage {
 
 	results: any;
-	keyword: any ='';
+	keyword: string = '';
 
   constructor(private navCtrl: NavController) {
   	this.results=this.getResults();
-  	this.keyword='';
+  	// this.keyword='';
+  }
+
+  searchItems(event : any){
+      if(this.keyword === '') {
+          this.results = this.getResults();
+      } else {
+        this.results = this.getResults().filter((item) => 
+            item.trackName.toLowerCase().includes(this.keyword.toLowerCase()));
+      }
   }
 
   getResults(){

@@ -5,6 +5,8 @@ import { StatusBar } from 'ionic-native';
 import { SearchPage } from './pages/SearchPage/SearchPage';
 import { BookList } from './pages/BookList/BookList';
 import { MusiclistPage } from './pages/musiclist/Musiclist';
+import { SettingPage } from './pages/setting/Setting';
+
 
 @Component({
   templateUrl: 'build/app.html'
@@ -12,7 +14,7 @@ import { MusiclistPage } from './pages/musiclist/Musiclist';
 class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = MusiclistPage;
+  rootPage: any = SettingPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -23,7 +25,8 @@ class MyApp {
     this.pages = [
       { title: 'Search Page', component: SearchPage },
       { title: 'Book List', component: BookList },
-      { title: 'Musiclist Page', component: MusiclistPage }
+      { title: 'Musiclist Page', component: MusiclistPage },
+      { title: 'Settings Page', component: SettingPage }
     ];
 
   }
