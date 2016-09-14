@@ -554,7 +554,8 @@ export class SettingPage {
     {
       "countryCode": "IQ",
       "countryName": "Iraq",
-      "capital": "Baghdad"
+      "capital": "Baghdad",
+      "rtl" : true
     },
     {
       "countryCode": "IR",

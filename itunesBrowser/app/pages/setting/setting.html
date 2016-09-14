@@ -18,7 +18,11 @@
 
 <ion-content padding radio-group [(ngModel)]="selectCountryCode">
 	<ion-list>
-		<ion-list-header>Pick a country</ion-list-header>
+		<ion-list-header *ngIf = "selectCountryCode === ''">Pick a country</ion-list-header>
+        <ion-list-header *ngIf = "selectCountryCode !== ''">
+            You Selected
+            <p [innerHtml] = "selectCountryCode"></p>
+        </ion-list-header>
 
 		<ion-item *ngFor="let item of countries" >
             <ion-label [innerHtml]="item.countryName"></ion-label>
